@@ -1,0 +1,14 @@
+uniform sampler2D sampler;
+uniform mat4 projection;
+
+varying vec2 tex_coords;
+
+void main() {
+	
+	vec4 clr = texture2D(sampler, tex_coords);
+	
+	vec4 intensity = vec4(1.0, 0.0, 0.0, 1.0);
+	
+	gl_FragColor = clr*intensity;
+	
+}
